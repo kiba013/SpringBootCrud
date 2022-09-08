@@ -19,7 +19,10 @@
     <header th:insert="header :: header"></header>
     <main>
         <div class="container mt-5">
-            <form class="needs-validation" method="post" th:action="@{/update/{id}(id=${id})}" th:object="${user}">
+            <form class="needs-validation"
+                  th:method="POST"
+                  th:action="@{/update/{id}(id=${id})}"
+                  th:object="${user}">
                 <div class="row g-3">
                     <div class="col-sm-4">
                         <label for="firstName" class="form-label">First name</label>
